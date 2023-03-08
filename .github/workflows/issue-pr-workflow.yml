@@ -6,9 +6,7 @@ on:
   pull_request:
     types: [opened]
 
-env:
-  TEAM_ISA: aimanbayezeed,somya0306,The1Ab0veAll
-  TEAM_MRSG: CH13F-1419,Neehal-ATD,Ritz-y-bot,PlexiTAURAD
+environment: Test
 
 jobs:
   auto-assigner:
@@ -17,16 +15,16 @@ jobs:
     steps:
       - name: Auto assign issues/PRs
         uses: wow-actions/auto-assign@v3.0.2
-        if: contains(env.TEAM_ISA, ${{ github.actor }})
+        if: contains(vars.TEAM_MRSG, ${{ github.actor }})
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: Neehal-ATD
+          assignees: Neehal-ATD
+        if: contains(vars.TEAM_ISA, ${{ github.actor }})
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           reviewers: aimanbayezeed
           assignees: aimanbayezeed
-        else:
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: CH13F-1419
-          assignees: CH13F-1419
 
   linter-formatter:
     name: Lint Code Base
