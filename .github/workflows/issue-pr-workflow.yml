@@ -18,15 +18,15 @@ jobs:
       - name: Auto assign issues/PRs
         uses: wow-actions/auto-assign@v3.0.2
         if: contains(env.TEAM_ISA, ${{ github.actor }})
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            reviewers: aimanbayezeed
-            assignees: aimanbayezeed
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: aimanbayezeed
+          assignees: aimanbayezeed
         else:
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            reviewers: CH13F-1419
-            assignees: CH13F-1419
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: CH13F-1419
+          assignees: CH13F-1419
 
   linter-formatter:
     name: Lint Code Base
