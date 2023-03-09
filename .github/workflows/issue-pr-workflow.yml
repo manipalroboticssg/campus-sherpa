@@ -18,11 +18,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           reviewers: Neehal-ATD
           assignees: Neehal-ATD
-        if: contains(vars.TEAM_ISA, ${{ github.actor }})
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: aimanbayezeed
-          assignees: aimanbayezeed
 
   linter-formatter:
     name: Lint Code Base
