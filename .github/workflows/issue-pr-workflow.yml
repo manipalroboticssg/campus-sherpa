@@ -16,12 +16,14 @@ jobs:
     steps:
       - name: Check if member is from Team ISA
         if: contains(vars.TEAM_ISA, ${{ github.actor }})
-        run:
+        run: 
           echo "TEAM_LEADER=CH13F-1419" >> $GITHUB_ENV
+          echo "Team Leader is CH13F-1419"
       - name: Check if member is from Team MRSG
         if: contains(vars.TEAM_MRSG, ${{ github.actor }})
-        run:
+        run: 
           echo "TEAM_LEADER=Neehal-ATD" >> $GITHUB_ENV
+          echo "Team Leader is Neehal-ATD"
       - name: Run Github Auto-Assign
         uses: wow-actions/auto-assign@v3.0.2
         with:
