@@ -8,12 +8,12 @@ on:
 
 jobs:
   auto-assigner:
+    if: contains(vars.TEAM_ISA, ${{ github.actor }})
     name: Auto Assign Reviewers
     runs-on: ubuntu-latest
     steps:
       - name: Auto assign issues/PRs
         uses: wow-actions/auto-assign@v3.0.2
-        if: contains(vars.TEAM_MRSG, ${{ github.actor }})
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           reviewers: Neehal-ATD
