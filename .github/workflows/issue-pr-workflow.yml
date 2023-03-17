@@ -1,5 +1,5 @@
 name: Issue/PR Workflow
-# This workflow auto-assigns a team leader to any opened issue/PR
+# This workflow auto-assigns team leaders to any opened issue/PR
 # It also lints the codebase in a PR as a status check
 
 on:
@@ -12,24 +12,13 @@ jobs:
   auto-assigner:
     name: Auto Assign Reviewers
     runs-on: ubuntu-latest
-    environment: Teams
     steps:
-      - name: Check if member is from Team ISA
-        if: contains(vars.TEAM_ISA, ${{ github.actor }})
-        run: 
-          echo "TEAM_LEADER=CH13F-1419" >> $GITHUB_ENV
-          echo "Team Leader is CH13F-1419"
-      - name: Check if member is from Team MRSG
-        if: contains(vars.TEAM_MRSG, ${{ github.actor }})
-        run: 
-          echo "TEAM_LEADER=Neehal-ATD" >> $GITHUB_ENV
-          echo "Team Leader is Neehal-ATD"
       - name: Run Github Auto-Assign
         uses: wow-actions/auto-assign@v3.0.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: ${{ env.TEAM_LEADER }}
-          assignees: ${{ env.TEAM_LEADER }}
+          reviewers: CH13F-1419, aimanbayezeed
+          assignees: CH13F-1419, aimanbayezeed
 
   linter-formatter:
     name: Lint Code Base
