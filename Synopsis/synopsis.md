@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Robots have a lot of potential in things like the service industry, especially for guiding peopel around massize campuses such as educational institutions. There's a lot of service robots that are used in the hotel industry in this manner, but none that do this for the outdoors.
+Robots have a lot of potential in things like the service industry, especially for guiding peopel around massize campuses such as educational institutions. There's a lot of service robots that are used in the hotel industry in this manner, but none that do this for the outdoors.ddd
 
 > Write something else here
 
