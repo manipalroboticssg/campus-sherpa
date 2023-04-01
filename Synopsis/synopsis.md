@@ -18,8 +18,30 @@ When speaking about operating robots with humans in harsh environments, disaster
 
 ## Objectives and Methodology
 
-> List the goals you want to achieve with this project and a timeline with milestones for the same
-
+ The objectives set for this project are :
+   
+  
+   The project will develop a UGV (Unmanned Ground Vehicle) that can navigate autonomously within a designated perimeter using GPS and LIDAR technology.
+   
+   
+   Develop a robust autonomous navigation system that can accurately detect and avoid obstacles within the designated perimeter.
+   
+   
+   Implement a communication system that enables remote monitoring and control of the UGV.
+   
+   
+   Conduct rigorous testing to ensure the UGV operates safely and effectively in different topologies.
+   
+   
+   Guiding or following the user by assuming the user as a beacon.
+   
+   
+   Image recognition by processing user fed image data through a GUI on a device connected wirelessly to the UGV. 
+   
+   
+   GUI acts acts as an interace between the UGV,USER and an image recognition software with a pre trained model using the image data of various          
+   locations inside the perimeter.
+ 
 ## References
 
 https://www.isa.org/intech-home/2018/march-april/features/welcome-to-industry-5-0
