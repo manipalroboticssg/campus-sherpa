@@ -39,8 +39,7 @@ When speaking about operating robots with humans in harsh environments, disaster
    Image recognition by processing user fed image data through a GUI on a device connected wirelessly to the UGV. 
    
    
-   GUI acts acts as an interace between the UGV,USER and an image recognition software with a pre trained model using the image data of various          
-   locations inside the perimeter.
+   GUI acts acts as an interace between the UGV,USER and an image recognition software with a pre trained model using the image data of various locations inside the perimeter.
  
 ## References
 
